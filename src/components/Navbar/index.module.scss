@@ -1,0 +1,12 @@
+.Navbar {
+  border-bottom: solid .05rem var(--color-primary);
+  padding: .5rem;
+  margin-left: .5rem;
+  margin-right: .5rem;
+  width: auto;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
