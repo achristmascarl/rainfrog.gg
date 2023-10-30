@@ -21,22 +21,25 @@ export default function Navbar({
 
   return (
     <nav className={c(className, styles.Navbar)}>
-      <div
-        className={c(styles.MenuIconWrapper, mobileMenuOpen ? "hidden" : "")}
-      >
-        <Bars3Icon
-          className={c(styles.MenuIcon, styles.OpenIcon)}
-          onClick={toggleMobileMenu}
-        />
+      <div>
+        <div
+          className={c(styles.MenuIconWrapper, mobileMenuOpen ? "hidden" : "")}
+        >
+          <Bars3Icon
+            className={c(styles.MenuIcon, styles.OpenIcon)}
+            onClick={toggleMobileMenu}
+          />
+        </div>
+        <div
+          className={c(styles.MenuIconWrapper, mobileMenuOpen ? "" : "hidden")}
+        >
+          <XMarkIcon
+            className={c(styles.MenuIcon, styles.CloseIcon)}
+            onClick={toggleMobileMenu}
+          />
+        </div>
       </div>
-      <div
-        className={c(styles.MenuIconWrapper, mobileMenuOpen ? "" : "hidden")}
-      >
-        <XMarkIcon
-          className={c(styles.MenuIcon, styles.CloseIcon)}
-          onClick={toggleMobileMenu}
-        />
-      </div>
+      <h5>rainfroggg</h5>
     </nav>
   );
 }
