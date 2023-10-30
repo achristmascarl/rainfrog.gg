@@ -1,0 +1,47 @@
+.Menu {
+  background-color: var(--color-secondary);
+  height: calc(100% - var(--nav-height));
+  width: 100%;
+  padding: 2rem;
+  position: absolute;
+  top: var(--nav-height);
+  left: 0;
+  z-index: 10;
+  transition: all 0.5s ease;
+  border-bottom: 0.05rem solid var(--color-primary);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  gap: 2rem;
+  align-items: center;
+  overflow-y: hidden;
+
+  &.collapsed {
+    height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    overflow: hidden;
+    border: none;
+  }
+
+  >.MenuItem {
+    height: 3rem;
+    width: 75%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    border-radius: .25rem;
+
+    &:hover {
+      cursor: pointer;
+      background-color: var(--color-secondary-darker);
+    }
+
+    &.selected {
+      cursor: default;
+      background-color: var(--color-secondary-darker);
+      pointer-events: none;
+    }
+  }
+}

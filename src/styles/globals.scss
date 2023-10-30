@@ -1,8 +1,14 @@
 @import 'node_modules/modern-normalize/modern-normalize.css';
 
 :root {
+  $primary: #54982F;
   --color-primary: #54982F;
+  --color-primary-darker: #{darken($primary, 5%)}; 
+  --color-primary-darkest: #{darken($primary, 10%)};
   --color-secondary: #F9E6ED;
+  $secondary: #F9E6ED;
+  --color-secondary-darker: #{darken($secondary, 5%)};
+  --color-secondary-darkest: #{darken($secondary, 10%)};
   --nav-height: 3rem;
 }
 
@@ -48,6 +54,11 @@ h4 {
   font-size: 1.25 rem;
 }
 
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
 nav {
   height: var(--nav-height);
   width: 100%;
@@ -70,4 +81,10 @@ main {
   width: 100%;
   overflow-y: auto;
   padding: .5rem;
+}
+
+.hidden {
+  height: 0 !important;
+  width: 0 !important;
+  opacity: 0 !important;
 }

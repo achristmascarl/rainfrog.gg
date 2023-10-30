@@ -8,3 +8,22 @@
 export function c(...args: string[]): string {
   return args.join(" ");
 }
+
+export const menuLinks = [
+  {
+    name: "Home",
+    path: "/",
+  },
+  {
+    name: "Flash",
+    path: "/flash",
+  },
+  {
+    name: "Book",
+    path: "/book",
+  },
+  {
+    name: "FAQ",
+    path: "/faq",
+  },
+];

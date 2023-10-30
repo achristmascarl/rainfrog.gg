@@ -10,3 +10,29 @@
   flex-flow: row nowrap;
   align-items: center;
 }
+
+.MenuIconWrapper {
+  height: 1.5rem;
+  width: 1.5rem;
+  display: flex;
+  flex-flow: column nowrap;
+  transition: all .25s ease-in-out;
+  border-radius: .25rem;
+
+  &:hover {
+    cursor: pointer;
+    background-color: var(--color-secondary-darker);
+  }
+}
+
+.MenuIcon {
+  stroke-width: .05rem;
+
+  &.OpenIcon {
+    transform: scale(.8, 0.667);
+  }
+
+  &.CloseIcon {
+    transform: scale(.75, 0.5);
+  }
+}

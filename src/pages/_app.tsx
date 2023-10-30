@@ -1,10 +1,13 @@
+import { useEffect, useState } from "react";
 import type { Metadata } from "next";
 import Head from "next/head";
 import { AppProps } from "next/app";
+import { usePathname } from "next/navigation";
 import { Ubuntu_Mono, Cutive_Mono } from "next/font/google";
 import "../styles/globals.scss";
 import { c } from "../utils";
 import Navbar from "@/components/Navbar";
+import Menu from "@/components/Menu";
 
 const ubuntuMono = Ubuntu_Mono({
   weight: "400",
@@ -23,6 +26,14 @@ export const metadata: Metadata = {
 };
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    console.log("pathname", pathname);
+    setMobileMenuOpen(false);
+  }, [pathname]);
+
   return (
     <>
       <Head>
@@ -37,8 +48,13 @@ function MyApp({ Component, pageProps }: AppProps) {
           }
         />
       </Head>
-      <Navbar className={c(ubuntuMono.variable, cutiveMono.variable)} />
+      <Navbar
+        className={c(ubuntuMono.variable, cutiveMono.variable)}
+        mobileMenuOpen={mobileMenuOpen}
+        setMobileMenuOpen={setMobileMenuOpen}
+      />
       <main className={c(ubuntuMono.variable, cutiveMono.variable)}>
+        <Menu mobileMenuOpen={mobileMenuOpen} />
         <Component {...pageProps} />
       </main>
     </>

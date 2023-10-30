@@ -1,10 +1,10 @@
 import { c } from "../utils";
 
-export default function Home() {
+export default function Book() {
   return (
     <div className={c("content")}>
-      <h1>home</h1>
-      <p>sick</p>
+      <h1>book</h1>
+      <p>yay~</p>
     </div>
   );
 }
