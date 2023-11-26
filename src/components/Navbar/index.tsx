@@ -42,7 +42,7 @@ export default function Navbar({
         </div>
       </div>
       <h5>
-        <SVG name="daisy-logo" className={styles.logoOrnament} />
+        <SVG name="daisy-logo" className={styles.LogoOrnament} />
         rainfroggg
       </h5>
       <DesktopMenu />

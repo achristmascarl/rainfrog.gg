@@ -2,6 +2,7 @@ import styles from "./index.module.scss";
 import { c, menuLinks } from "@/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import SVG from "../SVG";
 
 function MenuItem({ label, href }: { label: string; href: string }) {
   const pathname = usePathname();
@@ -21,6 +22,15 @@ export function MobileMenu({ mobileMenuOpen }: { mobileMenuOpen: boolean }) {
       {menuLinks.map((link, index) => (
         <MenuItem key={index} label={link.name} href={link.path} />
       ))}
+      <Link
+        className={c(styles.MenuItem)}
+        href="https://www.instagram.com/rainfrog.gg"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
+        <SVG name="instagram-logo" className={styles.InstagramLogo} />{" "}
+        @rainfrog.gg
+      </Link>
     </div>
   );
 }
@@ -31,6 +41,15 @@ export function DesktopMenu() {
       {menuLinks.map((link, index) => (
         <MenuItem key={index} label={link.name} href={link.path} />
       ))}
+      <Link
+        className={c(styles.MenuItem, styles.InstagramLink)}
+        title="@rainfrog.gg"
+        href="https://www.instagram.com/rainfrog.gg"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
+        <SVG name="instagram-logo" className={styles.InstagramLogo} />
+      </Link>
     </div>
   );
 }

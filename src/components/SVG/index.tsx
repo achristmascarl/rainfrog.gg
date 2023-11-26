@@ -29,7 +29,7 @@ export default function SVG({ name, className, color, id, ...props }: Props) {
 
   return (
     <SVG
-      className={`SVG SVG-${name} ${className}`}
+      className={`SVG SVG-${name} ${className ?? ""}`}
       style={{ color }}
       id={id ?? name}
       {...props}
