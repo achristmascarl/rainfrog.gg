@@ -1,3 +1,5 @@
+@use "../../styles/breakpoints" as *;
+
 .Menu {
   background-color: var(--color-secondary);
   height: calc(100% - var(--nav-height));
@@ -7,7 +9,7 @@
   top: var(--nav-height);
   left: 0;
   z-index: 9;
-  transition: all 0.75s ease-in-out;
+  transition: all 0.5s ease-in-out;
   border-bottom: 0.1rem solid var(--color-primary);
   display: flex;
   flex-flow: column nowrap;
@@ -21,24 +23,46 @@
     transform: translateY(calc(-100% - 5rem));
   }
 
+  @media screen and (min-width: $breakpoint-md) {
+    display: none;
+  }
+
   >.MenuItem {
     height: 3rem;
     width: 75%;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: center;
-    border-radius: .25rem;
+  }
+}
 
-    &:hover {
-      cursor: pointer;
-      background-color: var(--color-secondary-darker);
-    }
+.DesktopMenu {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  gap: 1rem;
 
-    &.selected {
-      cursor: default;
-      background-color: var(--color-secondary-darker);
-      pointer-events: none;
-    }
+  >.MenuItem {
+    padding: .5rem;
+  }
+
+  @media screen and (max-width: $breakpoint-md) {
+    display: none;
+  }
+}
+
+.MenuItem {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  border-radius: .25rem;
+
+  &:hover {
+    cursor: pointer;
+    background-color: var(--color-secondary-darker);
+  }
+
+  &.selected {
+    cursor: default;
+    background-color: var(--color-secondary-darker);
+    pointer-events: none;
   }
 }

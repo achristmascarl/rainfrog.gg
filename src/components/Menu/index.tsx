@@ -15,12 +15,22 @@ function MenuItem({ label, href }: { label: string; href: string }) {
   );
 }
 
-export default function Menu({ mobileMenuOpen }: { mobileMenuOpen: boolean }) {
+export function MobileMenu({ mobileMenuOpen }: { mobileMenuOpen: boolean }) {
   return (
     <div className={c(styles.Menu, mobileMenuOpen ? "" : styles.collapsed)}>
-      {menuLinks.map((link, index) => {
-        return <MenuItem key={index} label={link.name} href={link.path} />;
-      })}
+      {menuLinks.map((link, index) => (
+        <MenuItem key={index} label={link.name} href={link.path} />
+      ))}
+    </div>
+  );
+}
+
+export function DesktopMenu() {
+  return (
+    <div className={c(styles.DesktopMenu)}>
+      {menuLinks.map((link, index) => (
+        <MenuItem key={index} label={link.name} href={link.path} />
+      ))}
     </div>
   );
 }

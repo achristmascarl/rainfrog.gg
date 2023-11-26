@@ -7,7 +7,7 @@ import { Ubuntu_Mono, Cutive_Mono } from "next/font/google";
 import "../styles/globals.scss";
 import { c } from "../utils";
 import Navbar from "@/components/Navbar";
-import Menu from "@/components/Menu";
+import { MobileMenu } from "@/components/Menu";
 
 const ubuntuMono = Ubuntu_Mono({
   weight: "400",
@@ -54,7 +54,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         setMobileMenuOpen={setMobileMenuOpen}
       />
       <main className={c(ubuntuMono.variable, cutiveMono.variable)}>
-        <Menu mobileMenuOpen={mobileMenuOpen} />
+        <MobileMenu mobileMenuOpen={mobileMenuOpen} />
         <Component {...pageProps} />
       </main>
     </>

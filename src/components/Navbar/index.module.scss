@@ -1,3 +1,5 @@
+@use "../../styles/breakpoints" as *;
+
 .Navbar {
   border-bottom: solid .05rem var(--color-primary);
   padding: .25rem;
@@ -40,4 +42,10 @@
   &.CloseIcon {
     transform: scale(.75, 0.5);
   }
+}
+
+@media screen and (min-width: $breakpoint-md) {
+  .MobileMenuButton {
+    display: none;
+  }  
 }

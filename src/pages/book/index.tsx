@@ -1,4 +1,4 @@
-import { c } from "../utils";
+import { c } from "../../utils";
 
 export default function Book() {
   return (

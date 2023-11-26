@@ -3,6 +3,7 @@ import styles from "./index.module.scss";
 import { c } from "@/utils";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import { XMarkIcon } from "@heroicons/react/24/solid";
+import { DesktopMenu } from "../Menu";
 
 interface NavbarProps {
   className: string;
@@ -21,7 +22,7 @@ export default function Navbar({
 
   return (
     <nav className={c(className, styles.Navbar)}>
-      <div>
+      <div className={styles.MobileMenuButton}>
         <div
           className={c(styles.MenuIconWrapper, mobileMenuOpen ? "hidden" : "")}
         >
@@ -40,6 +41,7 @@ export default function Navbar({
         </div>
       </div>
       <h5>rainfroggg</h5>
+      <DesktopMenu />
     </nav>
   );
 }
