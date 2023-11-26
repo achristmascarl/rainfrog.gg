@@ -30,7 +30,6 @@ function MyApp({ Component, pageProps }: AppProps) {
   const pathname = usePathname();
 
   useEffect(() => {
-    console.log("pathname", pathname);
     setMobileMenuOpen(false);
   }, [pathname]);
 
