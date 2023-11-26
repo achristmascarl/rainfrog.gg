@@ -4,6 +4,7 @@ import { c } from "@/utils";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import { XMarkIcon } from "@heroicons/react/24/solid";
 import { DesktopMenu } from "../Menu";
+import SVG from "../SVG";
 
 interface NavbarProps {
   className: string;
@@ -40,7 +41,10 @@ export default function Navbar({
           />
         </div>
       </div>
-      <h5>rainfroggg</h5>
+      <h5>
+        <SVG name="daisy-logo" className={styles.logoOrnament} />
+        rainfroggg
+      </h5>
       <DesktopMenu />
     </nav>
   );

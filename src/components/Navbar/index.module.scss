@@ -15,6 +15,8 @@
 
   >h5 {
     align-self: flex-end;
+    position: relative;
+    margin-left: 1.25rem;
   }
 }
 
@@ -48,4 +50,12 @@
   .MobileMenuButton {
     display: none;
   }  
+}
+
+.logoOrnament {
+  position: absolute;
+  top: -.75rem;
+  left: -1.25rem;
+  width: 3rem;
+  height: 3rem;
 }
