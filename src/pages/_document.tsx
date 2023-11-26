@@ -1,5 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/react";
 
 class MyDocument extends Document {
   render() {
@@ -21,6 +22,7 @@ class MyDocument extends Document {
               gtag('config', 'G-8CLVJELB2X');
             `}
           </Script>
+          <Analytics />
           <Main />
           <NextScript />
         </body>
