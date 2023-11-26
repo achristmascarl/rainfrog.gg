@@ -19,8 +19,8 @@ export const menuLinks = [
     path: "/flash",
   },
   {
-    name: "Book",
-    path: "/book",
+    name: "Newsletter",
+    path: "/newsletter",
   },
   {
     name: "FAQ",
