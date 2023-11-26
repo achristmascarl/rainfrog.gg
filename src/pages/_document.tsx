@@ -1,10 +1,11 @@
-import Document, { Html, Main, NextScript } from "next/document";
+import Document, { Html, Head, Main, NextScript } from "next/document";
 import Script from "next/script";
 
 class MyDocument extends Document {
   render() {
     return (
       <Html>
+        <Head />
         <body>
           {/* <!-- Google tag (gtag.js) --> */}
           <Script
