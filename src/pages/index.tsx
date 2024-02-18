@@ -21,6 +21,8 @@ export default function Flash() {
               src={flashsheet.imgSrc}
               alt={flashsheet.imgAlt}
               style={{ width: "100%", height: "auto" }}
+              placeholder="blur"
+              loading="lazy"
             />
           </div>
         ))}
