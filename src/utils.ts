@@ -75,7 +75,7 @@ export const flashsheets: Flashsheet[] = [
   { imgSrc: flashsheet16, imgAlt: "a tattoo flashsheet by @rainfrog.gg" },
   { imgSrc: flashsheet17, imgAlt: "a tattoo flashsheet by @rainfrog.gg" },
   { imgSrc: flashsheet18, imgAlt: "a tattoo flashsheet by @rainfrog.gg" },
-  { imgSrc: flashsheet19, imgAlt: "a tattoo flashsheet by @rainfrog.gg" },
   { imgSrc: flashsheet20, imgAlt: "a tattoo flashsheet by @rainfrog.gg" },
   { imgSrc: flashsheet21, imgAlt: "a tattoo flashsheet by @rainfrog.gg" },
+  { imgSrc: flashsheet19, imgAlt: "a tattoo flashsheet by @rainfrog.gg" },
 ];

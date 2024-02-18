@@ -5,13 +5,15 @@ import styles from "./index.module.scss";
 
 export default function Flash() {
   return (
-    <div className={c("content")}>
-      <PageHead
-        title="rainfroggg - Flash"
-        description="Featured tattooo flash sheets"
-      />
-      <h1>flash</h1>
-      <p>yay~</p>
+    <>
+      <div className={c("content")}>
+        <PageHead
+          title="rainfroggg - Flash"
+          description="Featured tattooo flash sheets"
+        />
+        <h1>flash</h1>
+        <p>yay~</p>
+      </div>
       <div className={c(styles.FlashsheetsContainer)}>
         {flashsheets.map((flashsheet, i) => (
           <div key={i} className={c(styles.FlashsheetImgContainer)}>
@@ -23,6 +25,6 @@ export default function Flash() {
           </div>
         ))}
       </div>
-    </div>
+    </>
   );
 }
