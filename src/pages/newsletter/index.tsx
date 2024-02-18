@@ -9,7 +9,7 @@ export default function Newsletter() {
         description="Get notified about openings and designs"
       />
       <h1>newsletter</h1>
-      <p>woahh</p>
+      <p>coming soon!</p>
     </div>
   );
 }

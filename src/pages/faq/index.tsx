@@ -9,7 +9,7 @@ export default function FAQ() {
         description="Frequently asked questions"
       />
       <h1>FAQ</h1>
-      <p>yo</p>
+      <p>coming soon!</p>
     </div>
   );
 }

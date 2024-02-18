@@ -33,13 +33,13 @@ export function c(...args: string[]): string {
 }
 
 export const menuLinks = [
-  {
-    name: "Home",
-    path: "/",
-  },
+  // {
+  //   name: "Home",
+  //   path: "/",
+  // },
   {
     name: "Flash",
-    path: "/flash",
+    path: "/",
   },
   {
     name: "Newsletter",

@@ -1,4 +1,25 @@
-.HomePage {
+@use "../styles/breakpoints" as *;
+
+.FlashsheetsContainer {
   display: flex;
-  flex-direction: column;
+  gap: 0;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 0.25rem;
+
+  @include mobile {
+    gap: .5rem;
+    flex-flow: column nowrap;
+  }
+
+  >.FlashsheetImgContainer {
+    position: relative;
+    width: 50%;
+    padding: .25rem;
+
+    @include mobile {
+      width: 100%;
+      padding: 0;
+    }
+  }
 }
