@@ -27,3 +27,15 @@ export const menuLinks = [
     path: "/faq",
   },
 ];
+
+interface Flashsheet {
+  imgPath: string;
+  imgAlt: string;
+}
+
+export const flashsheets: Flashsheet[] = [
+  {
+    imgPath: "flashsheets/compressed-IMG_0964.jpeg",
+    imgAlt: "a tattoo flashsheet by @rainfrog.gg",
+  },
+];
