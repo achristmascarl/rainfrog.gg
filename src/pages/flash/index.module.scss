@@ -1,0 +1,10 @@
+.FlashsheetsContainer {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1rem;
+
+  >.FlashsheetImgContainer {
+    width: 100%;
+    position: relative;
+  }
+}
